@@ -1,6 +1,5 @@
 server:
   port: 8765
-
 zuul:
   routes:
     stu-account:
@@ -9,7 +8,6 @@ zuul:
     stu-authority:
       path: /stu-authority/**
       serviceId: stu-authority
-
 spring:
 # 数据源配置
   datasource:
