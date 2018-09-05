@@ -2,8 +2,6 @@ server:
   port: 8768
 foo: foo version 1
 spring:
-  application:
-    name: stu-config-client
 # 数据源配置
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
