@@ -1,5 +1,13 @@
 server:
-  port: 8762
+  port: 8765
+zuul:
+  routes:
+    stu-account:
+      path: /stu-account/**
+      serviceId: stu-account
+    stu-authority:
+      path: /stu-authority/**
+      serviceId: stu-authority
 spring:
   rabbitmq:
     host: localhost
@@ -11,16 +19,6 @@ spring:
   sleuth:
     sampler:
       percentage:1.0
-  multipart:
-    max-file-size: 100Mb
-    max-request-size: 100Mb
-    enabled : false
-  http:
-    # 过滤字符编码
-    encoding:
-      charset: UTF-8
-      enabled: true
-      force: true
 # 数据源配置
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -65,5 +63,4 @@ spring:
       enabled: false
   resources:
     static-locations: classpath:static/
-
 

@@ -6,6 +6,11 @@ feign:
     enabled: true
 
 spring:
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: guest
+    password: guest
   multipart:
     max-file-size: 100Mb
     max-request-size: 100Mb
