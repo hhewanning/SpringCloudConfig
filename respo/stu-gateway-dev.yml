@@ -8,6 +8,12 @@ zuul:
     stu-authority:
       path: /stu-authority/**
       serviceId: stu-authority
+    stu-host:
+      path: /stu-host/**
+      serviceId: stu-host
+    stu-order:
+      path: /stu-order/**
+      serviceId: stu-order
 spring:
   zipkin:
     base-url: http://localhost:8770
