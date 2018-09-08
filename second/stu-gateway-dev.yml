@@ -4,26 +4,19 @@ zuul:
   routes:
     stu-account:
       path: /stu-account/**
-      serviceId: stu-account
+ #     serviceId: stu-account
     stu-authority:
       path: /stu-authority/**
-      serviceId: stu-authority
+#      serviceId: stu-authority
     stu-host:
       path: /stu-host/**
-      serviceId: stu-host
+#      serviceId: stu-host
     stu-order:
       path: /stu-order/**
-      serviceId: stu-order
+#      serviceId: stu-order
 spring:
   zipkin:
     base-url: http://localhost:8770
   sleuth:
     sampler:
       percentage:1.0
-
-  mvc:
-    static-path-pattern: /**
-    favicon:
-      enabled: false
-  resources:
-    static-locations: classpath:static/

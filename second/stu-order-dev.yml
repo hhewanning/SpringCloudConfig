@@ -10,7 +10,7 @@ eureka:
       prefer-ip-address: true
 # api检测包
 swagger:
-  base-package: com.widthme.cm.web
+  base-package: com.widthme.cm
 spring:
   zipkin:
     base-url: http://localhost:8770
