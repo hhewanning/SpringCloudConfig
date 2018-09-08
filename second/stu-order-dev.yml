@@ -4,11 +4,13 @@ server:
 feign:
   hystrix:
     enabled: true
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-#    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
-#    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
+#api 的配置
+eureka:
+  instance:
+      prefer-ip-address: true
+# api检测包
+swagger:
+  base-package: com.widthme.cm.web
 spring:
   zipkin:
     base-url: http://localhost:8770
