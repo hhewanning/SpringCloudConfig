@@ -1,0 +1,50 @@
+server:
+  port: 8772
+#      开启断路器
+feign:
+  hystrix:
+    enabled: true
+#api 的配置
+eureka:
+  instance:
+      prefer-ip-address: true
+# api检测包
+swagger:
+  base-package: com.widthme.cm
+spring:
+  zipkin:
+    base-url: http://localhost:8770
+  sleuth:
+    sampler:
+      percentage:1.0
+  multipart:
+    max-file-size: 100Mb
+    max-request-size: 100Mb
+    enabled : false
+  http:
+    # 过滤字符编码
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+  mvc:
+    static-path-pattern: /**
+    favicon:
+      enabled: false
+  resources:
+    static-locations: classpath:static/
+# 数据源配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/books?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      # 实体类有更新时，数据库表更新
+      ddl-auto: create
+#      ddl-auto: update
+    show-sql: true
+    format_sql: true
+

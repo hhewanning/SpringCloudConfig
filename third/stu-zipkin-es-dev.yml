@@ -1,0 +1,14 @@
+server:
+  port: 8770
+
+zipkin:
+  storage:
+    type: elasticsearch
+    StorageComponent: elasticsearch
+    elasticsearch:
+      cluster: elasticsearch
+      max-requests: 3
+      index: stu-zipkin-log
+      index-shards: 3
+      index-replicas: 1
+      hosts: localhost:9200
