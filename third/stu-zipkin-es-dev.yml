@@ -1,6 +1,6 @@
 server:
   port: 8770
-
+#配置搜索引擎的配置
 zipkin:
   storage:
     type: elasticsearch

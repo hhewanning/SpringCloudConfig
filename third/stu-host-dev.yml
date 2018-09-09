@@ -40,9 +40,10 @@ spring:
 #      ddl-auto: update
     show-sql: true
     format_sql: true
+# spring boot admin的日志
 logging:
   file: "logs/stu-host.log"
-
+#spring boot admin的配置
 endpoints:
   health:
     sensitive: false
@@ -53,7 +54,7 @@ endpoints:
   beans:
     sensitive: false
     enabled: true
-
+#关闭actuator安全验证
 management:
   security:
     enabled: false

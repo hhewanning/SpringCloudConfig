@@ -1,5 +1,6 @@
 server:
   port: 8765
+#路由转发
 zuul:
   routes:
     stu-account:
@@ -14,6 +15,7 @@ zuul:
     stu-order:
       path: /stu-order/**
 #      serviceId: stu-order
+#数据链路配置
 spring:
   zipkin:
     base-url: http://localhost:8770
