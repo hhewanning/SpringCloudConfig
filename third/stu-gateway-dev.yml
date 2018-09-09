@@ -20,15 +20,3 @@ spring:
   sleuth:
     sampler:
       percentage:1.0
-#      spring boot admin 默认开启的节点
-  boot:
-    admin:
-      routes:
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
-#关闭安全验证
-management:
-  security:
-    enable: false
-#    日志输出路径
-logging:
-  file: "logs/boot-admin-sample.log"
