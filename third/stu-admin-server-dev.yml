@@ -7,6 +7,22 @@ spring:
     admin:
       routes:
         endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
+eureka:
+  instance:
+    metadata-map:
+      user.name: admin
+      user.password: 123456
+
+endpoints:
+  health:
+    sensitive: false
+    enabled: true
+  actuator:
+    enabled: true
+    sensitive: false
+  beans:
+    sensitive: false
+    enabled: true        
 #关闭安全验证
 management:
   security:
@@ -14,4 +30,11 @@ management:
 #    日志输出路径
 logging:
   file: "logs/boot-admin-sample.log"
+#security.basic.enabled: false
+#security:
+#  user:
+#    name: admin
+#    password: 123456
+
+
 

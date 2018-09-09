@@ -47,3 +47,14 @@ management:
 #    日志输出路径
 logging:
   file: "logs/boot-host-sample.log"
+
+endpoints:
+  health:
+    sensitive: false
+    enabled: true
+  actuator:
+    enabled: true
+    sensitive: false
+  beans:
+    sensitive: false
+    enabled: true
