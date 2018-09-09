@@ -22,3 +22,21 @@ spring:
   sleuth:
     sampler:
       percentage:1.0
+# spring boot admin的日志
+logging:
+  file: "logs/stu-gateway.log"
+#spring boot admin的配置
+endpoints:
+  health:
+    sensitive: false
+    enabled: true
+  actuator:
+    enabled: true
+    sensitive: false
+  beans:
+    sensitive: false
+    enabled: true
+#关闭actuator安全验证
+management:
+  security:
+    enabled: false
