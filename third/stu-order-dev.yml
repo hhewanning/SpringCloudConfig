@@ -47,13 +47,8 @@ spring:
 #      ddl-auto: update
     show-sql: true
     format_sql: true
-#关闭安全验证
-management:
-  security:
-    enable: false
-#    日志输出路径
 logging:
-  file: "logs/boot-order-sample.log"
+  file: "logs/stu-order.log"
 
 endpoints:
   health:
@@ -65,4 +60,8 @@ endpoints:
   beans:
     sensitive: false
     enabled: true
+
+management:
+  security:
+    enabled: false
 

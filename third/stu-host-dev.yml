@@ -40,13 +40,8 @@ spring:
 #      ddl-auto: update
     show-sql: true
     format_sql: true
-#关闭安全验证
-management:
-  security:
-    enable: false
-#    日志输出路径
 logging:
-  file: "logs/boot-host-sample.log"
+  file: "logs/stu-host.log"
 
 endpoints:
   health:
@@ -58,3 +53,7 @@ endpoints:
   beans:
     sensitive: false
     enabled: true
+
+management:
+  security:
+    enabled: false
